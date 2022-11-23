@@ -65,30 +65,32 @@ $(document).ready(function () {
 });
 
 // When time is up
-const myCarousel = document.getElementById("carouselExampleSlidesOnly");
-myCarousel.addEventListener("slide.bs.carousel", (event) => {
-  var ele = document.getElementsByClassName("radio");
-  for (var i = 0; i < ele.length; i++) {
-    ele[i].checked = false;
-  }
+// const myCarousel = document.getElementById("carouselExampleSlidesOnly");
+// myCarousel.addEventListener("slide.bs.carousel", (event) => {
+//   var ele = document.getElementsByClassName("radio");
+//   for (var i = 0; i < ele.length; i++) {
+//     ele[i].checked = false;
+//   }
 
-  if (curr_prim_q_no == 1) {
-    sec_q_attempt_for_prim.push(no_of_sec_correct);
-  } else {
-    sec_q_attempt_for_prim.push(
-      no_of_sec_correct -
-        sec_q_attempt_for_prim[sec_q_attempt_for_prim.length - 1]
-    );
-  }
+//   if (curr_prim_q_no == 1) {
+//     sec_q_attempt_for_prim.push(no_of_sec_correct);
+//   } else {
+//     sec_q_attempt_for_prim.push(
+//       no_of_sec_correct -
+//         sec_q_attempt_for_prim[sec_q_attempt_for_prim.length - 1]
+//     );
+//   }
 
-  curr_prim_q_no += 1;
-});
+//   curr_prim_q_no += 1;
+// });
 
 // Timer
+
 function resetTimer() {
+    console.log("timer");
   let startDate = new Date();
   let endDate = new Date();
-  endDate.setSeconds(endDate.getSeconds() + 5);
+  endDate.setSeconds(endDate.getSeconds() + 90);
   const months = [
     "January",
     "February",
