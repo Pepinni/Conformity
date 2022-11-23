@@ -1,0 +1,4 @@
+qs = ["Count total no. of figures in the below image","Which horse is different ?","Which one is different?","Which colors are the same ?","How many squares are there ?","How many triangles are present in the below figure ?","Which of the below figures is different?","Count the number of differences in the below images","How many rectangles are there in the figure?","How many differences are there between the above two images?"]
+options = [["5","7","9","8"],["1","2","3","None"],["1","2","3","None"],["2 and 3","1 and 2","3 and 4","None"],["30","35","40","45"],["20","24","21","23"],[,"A","B","C","D"],["15","5","10","20"],["8","9","10","7"],["7","9","6","13"]]
+ans = ["B","C","B","D","B","B","C","C","C","B"]
+images =["q1.png","q2.png","q3.png","q4.png","q5.png","q6.png","q7.png","q8.png","q9.png","q10.png"]
