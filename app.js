@@ -24,7 +24,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // mongoose.connect("mongodb://localhost:27017/Psycho", {useNewUrlParser: true, useUnifiedTopology: true});
-mongoose.connect(String(process.env.PASS),{ useNewUrlParser: true , useUnifiedTopology: true});
+mongoose.connect(String("mongodb+srv://Piyush:ginniferpep123@cluster0.ewfh1.mongodb.net/psycho"),{ useNewUrlParser: true , useUnifiedTopology: true});
 // mongoose.set('useCreateIndex', true);
 
 const questionSchema = new mongoose.Schema({
