@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="test">This is a test file</div>
+    <form action="/test" method="POST">
+        <input type="text" name="test">
+        <input id = "test-time" type = "text" name="test-time" placeholder="test-time">
+        <button type="submit"> Submit</button>
+    </form>
+
+    <iframe name="votar" style="display:none;"></iframe>
+    <form action="/tip" method="post" target="votar">
+        <input type = "text" name = "skicha">
+        <input id="time" type="datetime" name="time" />
+        <!-- <input id="time" type="text" name="time" size="17" placeholder="time"/> -->
+        <button type="submit" onclick="showTime()">Submit skicha</button>
+    </form>
+    <br>
+    <br>
+    <br>
+
+
+    <form action="/newuser" method="POST">
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="e-mail">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<script src="getTime.js" type="text/javascript"></script>
+</html>
