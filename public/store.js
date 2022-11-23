@@ -39,31 +39,56 @@ primary_q_images = [
 	"q10.png",
 ];
 
+primary_score = 0;
+
 primary_q_sel = [];
 
 primary_q_dur = [];
 
-// total_prim_attempt = 0;
-
 curr_prim_q_no = 1;
-
-sec_q = ["q1", "q2", "q3"]; // hard
-
-sec_q_ans = ["a", "c", "d"]; // hard
-
-// cur_sec_q_no = 1;
 
 sec_q_attempt_for_prim = [];
 
+sec_q = [
+	"Choose the box that comes next in the sequence",
+	"Choose the box that comes next in the sequence ",
+	"Choose the box that comes next in the sequence",
+	"Choose the box that comes next in the sequence",
+	"Find the word Red",
+	"Find the word Red",
+	"Find the word Red",
+	"Find the word Red",
+	"Find the word Red",
+	"Find the word Red",
+]; // hard
+
+sec_q_ans = ["C", "D", "B", "A", "C", "B", "B", "C", "A", "A"]; // hard
+
+sec_q_images = [
+	"Q 1.jpg",
+	"Q 2.jpg",
+	"Q 3.jpg",
+	"Q 4.jpg",
+	"Q 5.jpg",
+	"Q 6.jpg",
+	"Q 7.jpg",
+	"Q 8.jpg",
+	"Q 9.jpg",
+	"Q 10.jpg",
+];
+
+cur_sec_q_no = 1;
+
+
 no_of_sec_correct = 0;
 
-
 // Timer
+var prevTime = new Date();
 let countdown;
 function resetTimer() {
 	let startDate = new Date();
 	let endDate = new Date();
-	endDate.setSeconds(endDate.getSeconds() + 5);
+	endDate.setSeconds(endDate.getSeconds() + 90);
 	const months = [
 		"January",
 		"February",
@@ -119,7 +144,13 @@ function resetTimer() {
 		});
 
 		if (t < 0) {
-            nextQ();
+			updateDuration();
+			primary_q_sel.push("N");
+			if (curr_prim_q_no > primary_q.length) {
+				clearInterval(countdown);
+				return;
+			}
+			nextQ();
 			clearInterval(countdown);
 			resetTimer();
 			// $(".quiz-form").submit();
@@ -130,10 +161,11 @@ function resetTimer() {
 	getRemainingTime();
 }
 
-window.onload = function(){
-    resetTimer();
-    nextQ();
-}
+window.onload = function () {
+	resetTimer();
+	// nextQ();
+    addToPrimaryCard(curr_prim_q_no-1);
+};
 
 function addToPrimaryCard(i) {
 	let primary_task = `<div class="card">
@@ -151,6 +183,7 @@ function addToPrimaryCard(i) {
 	$("#primary-task").append(primary_task);
 }
 
+//Insert the next question into the html dom and update the variables
 function nextQ() {
 	$("#primary-task").empty();
 
@@ -162,28 +195,44 @@ function nextQ() {
 				sec_q_attempt_for_prim[sec_q_attempt_for_prim.length - 1]
 		);
 	}
-	addToPrimaryCard(curr_prim_q_no-1);
+	addToPrimaryCard(curr_prim_q_no);
 	curr_prim_q_no += 1;
 	clearInterval(countdown);
 	resetTimer();
 }
 
 // When a checkbox is selected
-$("#primary-task").on("click", ".option", function() {
+function updateDuration() {
+	var curTime = new Date();
+	var duration = (curTime.getTime() - prevTime.getTime()) / 1000;
+	primary_q_dur.push(duration);
+	prevTime = curTime;
+}
+
+$("#primary-task").on("click", ".option", function () {
 	if ($(".p_op_a").is(":checked") == true) {
-		primary_q_sel.push("a");
+		console.log("You selected A");
+		primary_q_sel.push("A");
+		if (primary_q_ans[curr_prim_q_no - 1] === "A") primary_score++;
+		updateDuration();
 		nextQ();
-	}
-	else if ($(".p_op_b").is(":checked") == true) {
-		primary_q_sel.push("b");
+	} else if ($(".p_op_b").is(":checked") == true) {
+		console.log("You selected B");
+		primary_q_sel.push("B");
+		if (primary_q_ans[curr_prim_q_no - 1] === "B") primary_score++;
+		updateDuration();
 		nextQ();
-	}
-	else if ($(".p_op_c").is(":checked") == true) {
-		primary_q_sel.push("c");
+	} else if ($(".p_op_c").is(":checked") == true) {
+		console.log("You selected C");
+		primary_q_sel.push("C");
+		if (primary_q_ans[curr_prim_q_no - 1] === "C") primary_score++;
+		updateDuration();
 		nextQ();
-	}
-	else if ($(".p_op_d").is(":checked") == true) {
-		primary_q_sel.push("d");
+	} else if ($(".p_op_d").is(":checked") == true) {
+		console.log("You selected D");
+		primary_q_sel.push("D");
+		if (primary_q_ans[curr_prim_q_no - 1] === "D") primary_score++;
+		updateDuration();
 		nextQ();
 	}
 });
@@ -192,6 +241,8 @@ $("#primary-task").on("click", ".option", function() {
 document.body.onkeyup = function (e) {
 	$("#primary_task").empty();
 	if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
+		primary_q_sel.push("N");
+		updateDuration();
 		nextQ();
 	}
 };

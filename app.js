@@ -23,30 +23,23 @@ app.use(session({
 app.use(passport.initialize()); 
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/Psycho", {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect("mongodb://localhost:27017/Psycho", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(String(process.env.PASS),{ useNewUrlParser: true , useUnifiedTopology: true});
 // mongoose.set('useCreateIndex', true);
 
 const questionSchema = new mongoose.Schema({
     duration : Number,
     secPerf : Number, 
 });
-// pqs = ["Q1", "Q2", "q3"];
-// pqsans = ['a', 'c', 'd'];
-// pqssubans = [['a', 'b', 'd'], ['a'], ['d', 'a']];
-// p_sub_time = [['t1', 't2', 't3']];
 
-
-// total_sec_corr = 0;
-// total_attempt = 0;
-// sqs ['q'];
-// sqa = ['anss'];
-// total_attempts_for_prim = [3,2,1,0,1]
 const userSchema = new mongoose.Schema({
     name : String,
     email : String,
     duration : String,
     selections : String,
-    num_sec_correct : Number
+    primary_score : Number,
+    secondary_score : Number,
+    num_sec_q_viewed : String,
 });
 
 userSchema.plugin(passportLocalMongoose);
