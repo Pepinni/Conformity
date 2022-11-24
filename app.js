@@ -23,8 +23,8 @@ app.use(session({
 app.use(passport.initialize()); 
 app.use(passport.session());
 
-// mongoose.connect("mongodb://localhost:27017/Psycho", {useNewUrlParser: true, useUnifiedTopology: true});
-mongoose.connect(String("mongodb+srv://Piyush:ginniferpep123@cluster0.ewfh1.mongodb.net/psycho"),{ useNewUrlParser: true , useUnifiedTopology: true});
+mongoose.connect("mongodb://localhost:27017/Psycho", {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect(String("mongodb+srv://Piyush:ginniferpep123@cluster0.ewfh1.mongodb.net/psycho"),{ useNewUrlParser: true , useUnifiedTopology: true});
 // mongoose.set('useCreateIndex', true);
 
 const questionSchema = new mongoose.Schema({
@@ -38,7 +38,8 @@ const userSchema = new mongoose.Schema({
     duration : String,
     selections : String,
     primary_score : Number,
-    secondary_score : Number,
+    secondary_right : Number,
+    secondary_wrong : Number,
     num_sec_q_viewed : String,
 });
 
@@ -68,7 +69,7 @@ app.get('/sde', function(req,res){
 })
 
 app.post("/newuser", function(req,res){
-    console.log("I was here")
+    console.log(req.body)
     var body = req.body;
     const newUser = new User({
         name : body.name,
@@ -89,6 +90,10 @@ app.get("/q", function(req,res){
     res.render("questions")
 })
 
+app.post("/dummy", function(req,res){
+    console.log(req.body);
+    res.render("question");
+})
 
 app.post('/test', function(req,res){
     console.log(req.body);

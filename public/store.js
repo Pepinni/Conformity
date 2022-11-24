@@ -79,16 +79,15 @@ sec_q_images = [
 
 cur_sec_q_no = 1;
 
-
 no_of_sec_correct = 0;
 
-// Timer
+// Timer for primary
 var prevTime = new Date();
 let countdown;
 function resetTimer() {
 	let startDate = new Date();
 	let endDate = new Date();
-	endDate.setSeconds(endDate.getSeconds() + 90);
+	endDate.setSeconds(endDate.getSeconds() + 5);
 	const months = [
 		"January",
 		"February",
@@ -148,12 +147,18 @@ function resetTimer() {
 			primary_q_sel.push("N");
 			if (curr_prim_q_no > primary_q.length) {
 				clearInterval(countdown);
+                var dur =  `<input type="text" name = "dur" value = "${primary_q_dur.toString()}">`;
+                var sels = `<input type="text" name = "sel" value = "${primary_q_sel.toString()}">`;
+                var p_score = `<input type="text" name = "p_score" value = "${primary_score}">`;
+                $(".dummy-form").append(dur);
+                $(".dummy-form").append(sels);
+                $(".dummy-form").append(p_score);
+                $(".dummy-form").submit();
 				return;
 			}
 			nextQ();
 			clearInterval(countdown);
 			resetTimer();
-			// $(".quiz-form").submit();
 		}
 	}
 	countdown = setInterval(getRemainingTime, 1000);
@@ -246,3 +251,68 @@ document.body.onkeyup = function (e) {
 		nextQ();
 	}
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////
+// Logic for secocondary questions
+let countdownSec;
+function resetTimerSec() {
+	let endDate = new Date();
+	endDate.setSeconds(endDate.getSeconds() + 10);
+	const months = ["January","February",		"March",		"April",		"May",		"June",		"July",		"August",		"September",		"October",		"November",		"December",	];
+	const weekdays = [		"Sunday",		"Monday",		"Tuesday",		"Wednesday",		"Thursday",		"Friday",		"Saturday",	];
+	let ed = new Date(endDate);
+	const futureTime = ed.getTime();
+	function getRemainingTime() {
+		const today = new Date().getTime();
+		const t = futureTime - today;
+		const oneHour = 60 * 60 * 1000;
+		const oneMinute = 60 * 1000;
+		let hours = Math.floor(t / oneHour);
+		let minutes = Math.floor((t % oneHour) / oneMinute);
+		let seconds = Math.floor((t % oneMinute) / 1000);
+
+		// Changing the values in DOM
+		const mins = $(".mins"); const secs = $(".secs");
+		const items = [hrs, mins, secs];
+		const values = [hours, minutes, seconds];
+		function format(item) {
+			if (item < 10) return (item = `0${item}`);
+			return item;
+		}
+		items.forEach(function (item, index) {
+			item.html(format(values[index]));
+		});
+
+		if (t < 0) {
+			if (curr_prim_q_no > primary_q.length) {
+				clearInterval(countdown);
+				return;
+			}
+			nextQ();
+			clearInterval(countdown);
+			resetTimer();
+			// $(".quiz-form").submit();
+		}
+	}
+	countdownSec = setInterval(getRemainingTime, 1000);
+
+	getRemainingTime();
+}
