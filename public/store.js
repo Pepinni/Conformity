@@ -239,7 +239,7 @@ let countdown;
 function resetTimer() {
 	let startDate = new Date();
 	let endDate = new Date();
-	endDate.setSeconds(endDate.getSeconds() + 500);
+	endDate.setSeconds(endDate.getSeconds() + 90);
 	const months = [
 		"January",
 		"February",
@@ -322,11 +322,10 @@ window.onload = function () {
 	resetTimer();
 	// nextQ();
 	addToPrimaryCard(curr_prim_q_no - 1);
-    makeGraph(curr_prim_q_no);
 };
 
 function addToPrimaryCard(i) {
-	let primary_task = `<div class="card">
+	let primary_task = `<div class="card border-0">
     <img class="p-task-img" src="/Images/primary_imgs/${primary_q_images[i]}" width="600" height="350">
         <div class="card-body">
             <div class = "qs"> ${primary_q[i]}</div>
@@ -337,24 +336,16 @@ function addToPrimaryCard(i) {
         </div>
 </div>`;
 	if (i % 2 == 1)
-		$("#primary-task").append(`<div>DO YOU WISH TO CHANGE YOUR ANSWER?</div>`);
+		$("#primary-task").append(`<div class="change">DO YOU WISH TO CHANGE YOUR ANSWER?</div>`);
 	$("#primary-task").append(primary_task);
 }
 
 //Insert the next question into the html dom and update the variables
 function nextQ() {
 	$("#primary-task").empty();
-	makeGraph(curr_prim_q_no);
-	if (curr_prim_q_no == 1) {
-		sec_q_attempt_for_prim.push(no_of_sec_correct);
-	} else {
-		sec_q_attempt_for_prim.push(
-			no_of_sec_correct -
-				sec_q_attempt_for_prim[sec_q_attempt_for_prim.length - 1]
-		);
-	}
 	addToPrimaryCard(curr_prim_q_no);
 	curr_prim_q_no += 1;
+	makeGraph(curr_prim_q_no);
 	clearInterval(countdown);
 	resetTimer();
 }
@@ -475,8 +466,10 @@ function resetTimerSec() {
 
 	getRemainingTime();
 }
+
 function makeGraph(i) {
 	$(".stats-div").empty();
+    if(curr_prim_q_no%2===1) return;
     $(".stats-div").append(`<canvas class="stats"></canvas>`);
     console.log("This function is called");
 	const labels = ["A", "B", "C", "D"];

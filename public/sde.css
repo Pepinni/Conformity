@@ -34,7 +34,7 @@
 
 
   #primary-task{
-    margin: 150px 0 0 320px;
+    margin: 180px 0 0 320px;
   }
 
   .secondary-task{
@@ -62,5 +62,17 @@
 
 .card{
     width: 600px;
+    border-style: none;
+    margin-left: 80px;
 }
 
+.change{
+    margin-left: 100px;
+    color: red;
+    font-size:20px;
+}
+
+img{
+    max-width: 75%;
+    height : auto;
+}
