@@ -63,10 +63,6 @@ app.get('/', function(req,res){
     res.render('home');
 })
 
-app.get('/sde', function(req,res){
-    res.render("sde");
-})
-
 app.post("/newuser", function(req,res){
     console.log(req.body)
     var body = req.body;
@@ -91,7 +87,7 @@ app.get("/q", function(req,res){
 
 app.post("/dummy", function(req,res){
     console.log(req.body);
-    res.render("questions");
+    res.redirect("/q");
 })
 
 app.post('/test', function(req,res){

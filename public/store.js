@@ -1,4 +1,65 @@
-primary_q = ['Count total no. of figures in the above image.', 'Count total no. of figures in the above image.', 'Which horse is different?', 'Which horse is different?', 'Which one is different?', 'Which one is different?', 'Which colors are the same ?', 'Which colors are the same ?', 'How many squares are there ?', 'How many squares are there ?', 'Which one is different', 'Which one is different', 'How many triangles are present in the above figure ?', 'How many triangles are present in the above figure ?', 'Which of the above figures is different?', 'Which of the above figures is different?', 'Count the number of differences in the above images.', 'Count the number of differences in the above images.', 'How many rectangles are there in the figure?', 'How many rectangles are there in the figure?', 'Which one is different', 'Which one is different', 'Which one is different', 'Which one is different', 'Which one is different', 'Which one is different', 'Count no. of difference for above two images', 'Count no. of difference for above two images', 'Count no. of difference for above two images', 'Count no. of difference for above two images', 'Count no. of difference for above two images', 'Count no. of difference for above two images', 'How many differences are there between the above two images?', 'How many differences are there between the above two images?', 'Choose a figure which is different from the rest.', 'Choose a figure which is different from the rest.', 'Choose a figure which is different from the rest.', 'Choose a figure which is different from the rest.', 'How many differences are there between the above two images?', 'How many differences are there between the above two images?', 'Choose the correct spelling', 'Choose the correct spelling', 'Select the word with correct spelling', 'Select the word with correct spelling', 'Which is the top view?', 'Which is the top view?', 'Can you find the mistake?', 'Can you find the mistake?', 'Select the image different from the rest', 'Select the image different from the rest', 'Find the missing number.', 'Find the missing number.', 'Which path takes you out of the maze?', 'Which path takes you out of the maze?', 'How many colors can you see?', 'How many colors can you see?', 'Which square looks different?', 'Which square looks different?', 'How many 9’s can you see in the above picture?', 'How many 9’s can you see in the above picture?'];
+primary_q = [
+	"Count total no. of figures in the above image.",
+	"Count total no. of figures in the above image.",
+	"Which horse is different?",
+	"Which horse is different?",
+	"Which one is different?",
+	"Which one is different?",
+	"Which colors are the same ?",
+	"Which colors are the same ?",
+	"How many squares are there ?",
+	"How many squares are there ?",
+	"Which one is different",
+	"Which one is different",
+	"How many triangles are present in the above figure ?",
+	"How many triangles are present in the above figure ?",
+	"Which of the above figures is different?",
+	"Which of the above figures is different?",
+	"Count the number of differences in the above images.",
+	"Count the number of differences in the above images.",
+	"How many rectangles are there in the figure?",
+	"How many rectangles are there in the figure?",
+	"Which one is different",
+	"Which one is different",
+	"Which one is different",
+	"Which one is different",
+	"Which one is different",
+	"Which one is different",
+	"Count no. of difference for above two images",
+	"Count no. of difference for above two images",
+	"Count no. of difference for above two images",
+	"Count no. of difference for above two images",
+	"Count no. of difference for above two images",
+	"Count no. of difference for above two images",
+	"How many differences are there between the above two images?",
+	"How many differences are there between the above two images?",
+	"Choose a figure which is different from the rest.",
+	"Choose a figure which is different from the rest.",
+	"Choose a figure which is different from the rest.",
+	"Choose a figure which is different from the rest.",
+	"How many differences are there between the above two images?",
+	"How many differences are there between the above two images?",
+	"Choose the correct spelling",
+	"Choose the correct spelling",
+	"Select the word with correct spelling",
+	"Select the word with correct spelling",
+	"Which is the top view?",
+	"Which is the top view?",
+	"Can you find the mistake?",
+	"Can you find the mistake?",
+	"Select the image different from the rest",
+	"Select the image different from the rest",
+	"Find the missing number.",
+	"Find the missing number.",
+	"Which path takes you out of the maze?",
+	"Which path takes you out of the maze?",
+	"How many colors can you see?",
+	"How many colors can you see?",
+	"Which square looks different?",
+	"Which square looks different?",
+	"How many 9’s can you see in the above picture?",
+	"How many 9’s can you see in the above picture?",
+];
 
 primary_q_options = [
 	["5", "7", "9", "8"],
@@ -124,9 +185,70 @@ primary_q_ans = [
 	"A",
 	"D",
 	"D",
-]; // hard
+];
 
-primary_q_priors = [[3, 62, 7, 28], [3, 62, 7, 28], [70, 10, 12, 8], [70, 10, 12, 8], [11, 69, 10, 10], [11, 69, 10, 10], [12, 18, 57, 13], [12, 18, 57, 13], [7, 73, 11, 9], [7, 73, 11, 9], [25, 55, 8, 12], [25, 55, 8, 12], [25, 3, 65, 7], [25, 3, 65, 7], [70, 15, 5, 10], [70, 15, 5, 10], [13, 13, 67, 7], [13, 13, 67, 7], [7, 17, 73, 3], [7, 17, 73, 3], [80, 7, 11, 2], [80, 7, 11, 2], [61, 19, 15, 5], [61, 19, 15, 5], [14, 6, 76, 4], [14, 6, 76, 4], [57, 23, 16, 4], [57, 23, 16, 4], [14, 66, 11, 9], [14, 66, 11, 9], [13, 77, 6, 4], [13, 77, 6, 4], [8, 82, 2, 8], [8, 82, 2, 8], [71, 9, 10, 10], [71, 9, 10, 10], [76, 4, 11, 9], [76, 4, 11, 9], [12, 68, 13, 7], [12, 68, 13, 7], [13, 15, 65, 7], [13, 15, 65, 7], [77, 3, 1, 19], [77, 3, 1, 19], [7, 2, 88, 3], [7, 2, 88, 3], [12, 3, 78, 8], [12, 3, 78, 8], [5, 5, 14, 76], [5, 5, 14, 76], [17, 3, 16, 64], [17, 3, 16, 64], [11, 5, 79, 5], [11, 5, 79, 5], [7, 16, 3, 74], [7, 16, 3, 74], [80, 4, 5, 11], [80, 4, 5, 11], [72, 8, 13, 7], [72, 8, 13, 7]];
+primary_q_priors = [
+	[3, 62, 7, 28],
+	[3, 62, 7, 28],
+	[70, 10, 12, 8],
+	[70, 10, 12, 8],
+	[11, 69, 10, 10],
+	[11, 69, 10, 10],
+	[12, 18, 57, 13],
+	[12, 18, 57, 13],
+	[7, 73, 11, 9],
+	[7, 73, 11, 9],
+	[25, 55, 8, 12],
+	[25, 55, 8, 12],
+	[25, 3, 65, 7],
+	[25, 3, 65, 7],
+	[70, 15, 5, 10],
+	[70, 15, 5, 10],
+	[13, 13, 67, 7],
+	[13, 13, 67, 7],
+	[7, 17, 73, 3],
+	[7, 17, 73, 3],
+	[80, 7, 11, 2],
+	[80, 7, 11, 2],
+	[61, 19, 15, 5],
+	[61, 19, 15, 5],
+	[14, 6, 76, 4],
+	[14, 6, 76, 4],
+	[57, 23, 16, 4],
+	[57, 23, 16, 4],
+	[14, 66, 11, 9],
+	[14, 66, 11, 9],
+	[13, 77, 6, 4],
+	[13, 77, 6, 4],
+	[8, 82, 2, 8],
+	[8, 82, 2, 8],
+	[71, 9, 10, 10],
+	[71, 9, 10, 10],
+	[76, 4, 11, 9],
+	[76, 4, 11, 9],
+	[12, 68, 13, 7],
+	[12, 68, 13, 7],
+	[13, 15, 65, 7],
+	[13, 15, 65, 7],
+	[77, 3, 1, 19],
+	[77, 3, 1, 19],
+	[7, 2, 88, 3],
+	[7, 2, 88, 3],
+	[12, 3, 78, 8],
+	[12, 3, 78, 8],
+	[5, 5, 14, 76],
+	[5, 5, 14, 76],
+	[17, 3, 16, 64],
+	[17, 3, 16, 64],
+	[11, 5, 79, 5],
+	[11, 5, 79, 5],
+	[7, 16, 3, 74],
+	[7, 16, 3, 74],
+	[80, 4, 5, 11],
+	[80, 4, 5, 11],
+	[72, 8, 13, 7],
+	[72, 8, 13, 7],
+];
 
 primary_q_images = [
 	"1.png",
@@ -199,39 +321,19 @@ primary_q_dur = [];
 
 curr_prim_q_no = 1;
 
-sec_q_attempt_for_prim = [];
-
-sec_q = [
-	"Choose the box that comes next in the sequence",
-	"Choose the box that comes next in the sequence ",
-	"Choose the box that comes next in the sequence",
-	"Choose the box that comes next in the sequence",
-	"Find the word Red",
-	"Find the word Red",
-	"Find the word Red",
-	"Find the word Red",
-	"Find the word Red",
-	"Find the word Red",
-]; // hard
-
-sec_q_ans = ["C", "D", "B", "A", "C", "B", "B", "C", "A", "A"]; // hard
-
-sec_q_images = [
-	"Q 1.jpg",
-	"Q 2.jpg",
-	"Q 3.jpg",
-	"Q 4.jpg",
-	"Q 5.jpg",
-	"Q 6.jpg",
-	"Q 7.jpg",
-	"Q 8.jpg",
-	"Q 9.jpg",
-	"Q 10.jpg",
-];
-
-cur_sec_q_no = 1;
-
-no_of_sec_correct = 0;
+function submitData() {
+	var dur = `<input type="text" name = "dur" value = "${primary_q_dur.toString()}">`;
+	var sels = `<input type="text" name = "sel" value = "${primary_q_sel.toString()}">`;
+	var p_score = `<input type="text" name = "p_score" value = "${primary_score}">`;
+	var sec_right = `<input type="text" name = "sec_right" value = "${correct_p}">`;
+	var sec_wrong = `<input type="text" name = "sec_wrong" value = "${wrong_p}">`;
+	$(".dummy-form").append(dur);
+	$(".dummy-form").append(sels);
+	$(".dummy-form").append(p_score);
+	$(".dummy-form").append(sec_right);
+	$(".dummy-form").append(sec_wrong);
+	$(".dummy-form").submit();
+}
 
 // Timer for primary
 var prevTime = new Date();
@@ -263,21 +365,16 @@ function resetTimer() {
 		"Friday",
 		"Saturday",
 	];
-
 	let ed = new Date(endDate);
-
 	const futureTime = ed.getTime();
-
 	function getRemainingTime() {
 		const today = new Date().getTime();
-
 		const t = futureTime - today;
 		const oneHour = 60 * 60 * 1000;
 		const oneMinute = 60 * 1000;
 		let hours = Math.floor(t / oneHour);
 		let minutes = Math.floor((t % oneHour) / oneMinute);
 		let seconds = Math.floor((t % oneMinute) / 1000);
-
 		// Changing the values in DOM
 		const hrs = $(".hours");
 		const mins = $(".mins");
@@ -293,19 +390,12 @@ function resetTimer() {
 		items.forEach(function (item, index) {
 			item.html(format(values[index]));
 		});
-
 		if (t < 0) {
 			updateDuration();
 			primary_q_sel.push("N");
 			if (curr_prim_q_no >= primary_q.length) {
 				clearInterval(countdown);
-				var dur = `<input type="text" name = "dur" value = "${primary_q_dur.toString()}">`;
-				var sels = `<input type="text" name = "sel" value = "${primary_q_sel.toString()}">`;
-				var p_score = `<input type="text" name = "p_score" value = "${primary_score}">`;
-				$(".dummy-form").append(dur);
-				$(".dummy-form").append(sels);
-				$(".dummy-form").append(p_score);
-				$(".dummy-form").submit();
+				submitData();
 				return;
 			}
 			nextQ();
@@ -318,34 +408,42 @@ function resetTimer() {
 	getRemainingTime();
 }
 
-window.onload = function () {
+function startSurvey() {
+	$(".cts").hide();
 	resetTimer();
-	// nextQ();
 	addToPrimaryCard(curr_prim_q_no - 1);
-};
+	setInterval(function () {
+		var audio = new Audio(`audios/${pees[sn]}.mp3`);
+		audio.play();
+		sn += 1;
+	}, 2000);
+}
 
 function addToPrimaryCard(i) {
 	let primary_task = `<div class="card border-0">
     <img class="p-task-img" src="/Images/primary_imgs/${primary_q_images[i]}" width="600" height="350">
-        <div class="card-body">
-            <div class = "qs"> ${primary_q[i]}</div>
-            <input type="radio" name = "option" class="p_op_a option">${primary_q_options[i][0]}<br>
+    <div class="card-body">
+    <div class = "qs"> ${primary_q[i]}</div>
+    <input type="radio" name = "option" class="p_op_a option">${primary_q_options[i][0]}<br>
             <input type="radio" name = "option" class="p_op_b option">${primary_q_options[i][1]}<br>
             <input type="radio" name = "option" class="p_op_c option">${primary_q_options[i][2]}<br>
             <input type="radio" name = "option" class="p_op_d option">${primary_q_options[i][3]}<br>
-        </div>
-</div>`;
+            </div>
+            </div>`;
 	if (i % 2 == 1)
-		$("#primary-task").append(`<div class="change">DO YOU WISH TO CHANGE YOUR ANSWER?</div>`);
+		$("#primary-task").append(
+			`<div class="change">DO YOU WISH TO CHANGE YOUR ANSWER?</div>`
+		);
 	$("#primary-task").append(primary_task);
 }
 
 //Insert the next question into the html dom and update the variables
 function nextQ() {
 	$("#primary-task").empty();
-	addToPrimaryCard(curr_prim_q_no);
 	curr_prim_q_no += 1;
-	makeGraph(curr_prim_q_no);
+    if(curr_prim_q_no>=primary_q.length) submitData();
+	addToPrimaryCard(curr_prim_q_no - 1);
+	makeGraph(curr_prim_q_no - 1);
 	clearInterval(countdown);
 	resetTimer();
 }
@@ -360,25 +458,21 @@ function updateDuration() {
 
 $("#primary-task").on("click", ".option", function () {
 	if ($(".p_op_a").is(":checked") == true) {
-		console.log("You selected A");
 		primary_q_sel.push("A");
 		if (primary_q_ans[curr_prim_q_no - 1] === "A") primary_score++;
 		updateDuration();
 		nextQ();
 	} else if ($(".p_op_b").is(":checked") == true) {
-		console.log("You selected B");
 		primary_q_sel.push("B");
 		if (primary_q_ans[curr_prim_q_no - 1] === "B") primary_score++;
 		updateDuration();
 		nextQ();
 	} else if ($(".p_op_c").is(":checked") == true) {
-		console.log("You selected C");
 		primary_q_sel.push("C");
 		if (primary_q_ans[curr_prim_q_no - 1] === "C") primary_score++;
 		updateDuration();
 		nextQ();
 	} else if ($(".p_op_d").is(":checked") == true) {
-		console.log("You selected D");
 		primary_q_sel.push("D");
 		if (primary_q_ans[curr_prim_q_no - 1] === "D") primary_score++;
 		updateDuration();
@@ -393,92 +487,28 @@ document.body.onkeyup = function (e) {
 		primary_q_sel.push("N");
 		updateDuration();
 		nextQ();
-	} else if (e.keyCode == 80) {
-		// alert("P was pressed");
+	} else if (e.key == "p") {
+		if (pees[sn - 1] == "P") correct_p++;
+		else wrong_p++;
 	}
 };
 
-///////////////////////////////////////////
-// Logic for secocondary questions
-let countdownSec;
-function resetTimerSec() {
-	let endDate = new Date();
-	endDate.setSeconds(endDate.getSeconds() + 10);
-	const months = [
-		"January",
-		"February",
-		"March",
-		"April",
-		"May",
-		"June",
-		"July",
-		"August",
-		"September",
-		"October",
-		"November",
-		"December",
-	];
-	const weekdays = [
-		"Sunday",
-		"Monday",
-		"Tuesday",
-		"Wednesday",
-		"Thursday",
-		"Friday",
-		"Saturday",
-	];
-	let ed = new Date(endDate);
-	const futureTime = ed.getTime();
-	function getRemainingTime() {
-		const today = new Date().getTime();
-		const t = futureTime - today;
-		const oneHour = 60 * 60 * 1000;
-		const oneMinute = 60 * 1000;
-		let hours = Math.floor(t / oneHour);
-		let minutes = Math.floor((t % oneHour) / oneMinute);
-		let seconds = Math.floor((t % oneMinute) / 1000);
-
-		// Changing the values in DOM
-		const mins = $(".mins");
-		const secs = $(".secs");
-		const items = [hrs, mins, secs];
-		const values = [hours, minutes, seconds];
-		function format(item) {
-			if (item < 10) return (item = `0${item}`);
-			return item;
-		}
-		items.forEach(function (item, index) {
-			item.html(format(values[index]));
-		});
-
-		if (t < 0) {
-			if (curr_prim_q_no > primary_q.length) {
-				clearInterval(countdown);
-				return;
-			}
-			nextQ();
-			clearInterval(countdown);
-			resetTimer();
-			// $(".quiz-form").submit();
-		}
-	}
-	countdownSec = setInterval(getRemainingTime, 1000);
-
-	getRemainingTime();
-}
-
 function makeGraph(i) {
 	$(".stats-div").empty();
-    if(curr_prim_q_no%2===1) return;
-    $(".stats-div").append(`<canvas class="stats"></canvas>`);
-    console.log("This function is called");
+	if (curr_prim_q_no % 2 === 1) return;
+	$(".stats-div").append(`<canvas class="stats"></canvas>`);
 	const labels = ["A", "B", "C", "D"];
 	const data = {
 		labels: labels,
 		datasets: [
 			{
 				label: "Majority Votes",
-				data: [primary_q_priors[i][0], primary_q_priors[i][1], primary_q_priors[i][2], primary_q_priors[i][3]],
+				data: [
+					primary_q_priors[i][0],
+					primary_q_priors[i][1],
+					primary_q_priors[i][2],
+					primary_q_priors[i][3],
+				],
 				backgroundColor: "rgb(255,99, 132, 0.4)", //Utils.CHART_COLORS.red,
 				borderColor: "rgb(255,99,132)",
 				stack: "Stack 0",
@@ -532,3 +562,15 @@ function makeGraph(i) {
 	var myChart = new Chart(document.querySelector(".stats"), config);
 }
 
+var correct_p = 0;
+var wrong_p = 0;
+let pees =
+	"CNJPKTEPCVPPYPGEJNTRJRNRUDIGPPGOGQIYKKPCBWWJPPNILADHNPKVNZPIOTMVTJVXHBHBVTADGPYHPUUXAPAPTWGJPVTSOOOPCHMYPZWUTNZFPVDPQYUDBBPUTYJPPHQOPHOBDGKPZJDFPAOJOAOSLZYPTKAPZDVCMPATFLPMDZPPZMYPYGWDUKHTRREDIPPWRSFTTIPPHGOPBPGPDDEEXBPUIXBPSZPKMTPPLLQQXPWPPYPJAZHEFMNDPPNMZXZDVRNIQVZZYFNXSPHOOYSPOECKCPPJPPOPPPDMTRBPOHVQKAZEPXHGISPWIPPTKPPPZDGZFSPPXSZFBPXBPPVALFMEKZNPJPQTJPAWRNLBOXLPWTPVIPGDYZPMVXAPCZLCZPKTPOMBAAPBMHWPDOTPFHZQOEGTSUUPIPATNWJHVUHBRPPPPDEXGBNTNVYPKNLNKPLEPBJYXLVYXAZFMCBQYTTZTPKTKFSUXENPFBPTHVPPPRKZMJKYKPJPBZOWLDSWRPVUOMHXBHQILAXODPIUFHCZZJHLPZDXPXLOYFWOFNFRPUWPWPLGKCNWDWGJWSTBWPBGPFBUFPPDKNPPSOBNWSYKHSNDKNLNDPRHGEPYPIPPLNZEVYIYPQMJKPPEVEZGPFCTIGHRNACBPXPBPRIJPVFCTKJPIPQFPAPRIXPHLPPJNPXSOBPAPJRTGLPPEMHJGNPWYOPPMPPXLDJBYVIAYPRABPADZSJPPXZACQTXMIHLABQMNPHWXNGUSIQIKFJPKPSXUQTQHRYGASCPATVFPUJMYPSNRUOOXGIISPEURPTOPUAXSALQYDSIBPYUSZMOQDPNHJPPPYGYYSPPJTZEFFVBQNOLJGFOKIFPOMVMPPPSLPLPPPAEPPGBPVNPPUONSSPMPWPYVCREDKWBJPMKNTYMZMAPPMQWIAWYSBFNBLDIODPBQFKWPDPPSPYRHEFSCMJMPCXFPPUPIFPUVUZCBNZPBULJNDCATUWXWRARPOFPZPVPJJJNIGRPKKLNFOQPAQMCPPEMHBPPOCOPBNISEPMPPNXQOOZPYNPMPDXZHPVKPIXOKSYJNWZFGFSPIYFWPSPGHPRZPOJJYKPMHFCFPLRKWURXPTEPZZVCZTQGPPPAZAPNMHBQPTZFPUCKEDJSRSTPZBPCJIHZKHAVEPFPLATQQIWFIQPTTGPSCTLPPQAMAWVFCQSQFIPPEXQPZTHYXIPOGZDQIPHHHIUMPGYUPPPXZPUGYVPNYYCPWFPPGZYOAOHUPRPJZQKPYNHWPSLEPIPBQUFCPRQQPSPJDFRYBYHMCQSERHGSPSIPJHABDPMNFPSSPUPLAIEYPLYTPNQHXD";
+
+let sn = 0;
+
+// setInterval(function () {
+// 	var audio = new Audio(`audios/${pees[sn]}.mp3`);
+// 	audio.play();
+// 	sn += 1;
+// }, 2000);

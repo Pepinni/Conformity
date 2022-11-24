@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <!-- <div id="user" hidden>Hello <%# name %></div> -->
-
+    <div id="user" hidden>Hello <%# name %></div>
+    
     <!-- Timer for the quiz -->
     <div class="timer-box">
         <div class="timer">
@@ -25,16 +25,6 @@
         </div>
     </div>
 
-    <!-- <div class="secondary-task">
-        <div class="card">
-            <img class="p-task-img" src="/Images/pasted image 0.png" width="250" height="250">
-            <div class="card-body">
-                <div class="sq">This is a secondary task question</div>
-                <input type="text" placeholder="response">
-            </div>
-        </div>
-    </div> -->
-
     <form action="/dummy" method="POST" hidden class="dummy-form">
         <!-- This form will be used to send data to  -->
         <button type="submit">.</button>
@@ -42,7 +32,7 @@
 
     <div class="split left">
         <div id="primary-task">
-            <!-- HTML from jquery will be inserted here -->
+            <button class="cts" onclick="startSurvey()">Click to start</button>
         </div>
     </div>
 
