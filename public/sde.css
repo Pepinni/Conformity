@@ -46,6 +46,21 @@
 
 .timer-box{
     position: fixed;
-    top: 40px;
-    right: 60px;
+    top: 240px;
+    left: 220px;
+    font-size: larger;
+    border-color: black;
+    border-style: solid;
+    padding:10px;
+    border-radius: 25px;
   }
+
+.stats{
+    margin-top: 150px;
+    margin-right: 90px;
+}
+
+.card{
+    width: 600px;
+}
+

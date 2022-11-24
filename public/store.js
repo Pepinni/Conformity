@@ -1,65 +1,4 @@
-primary_q = [
-	"Count total no. of figures in the below image.",
-	"Count total no. of figures in the below image.",
-	"Which horse is different?",
-	"Which horse is different?",
-	"Which one is different?",
-	"Which one is different?",
-	"Which colors are the same ?",
-	"Which colors are the same ?",
-	"How many squares are there ?",
-	"How many squares are there ?",
-	"Which one is different",
-	"Which one is different",
-	"How many triangles are present in the below figure ?",
-	"How many triangles are present in the below figure ?",
-	"Which of the below figures is different?",
-	"Which of the below figures is different?",
-	"Count the number of differences in the below images.",
-	"Count the number of differences in the below images.",
-	"How many rectangles are there in the figure?",
-	"How many rectangles are there in the figure?",
-	"Which one is different",
-	"Which one is different",
-	"Which one is different",
-	"Which one is different",
-	"Which one is different",
-	"Which one is different",
-	"Count no. of difference for below two images",
-	"Count no. of difference for below two images",
-	"Count no. of difference for below two images",
-	"Count no. of difference for below two images",
-	"Count no. of difference for below two images",
-	"Count no. of difference for below two images",
-	"How many differences are there between the above two images?",
-	"How many differences are there between the above two images?",
-	"Choose a figure which is different from the rest.",
-	"Choose a figure which is different from the rest.",
-	"Choose a figure which is different from the rest.",
-	"Choose a figure which is different from the rest.",
-	"How many differences are there between the above two images?",
-	"How many differences are there between the above two images?",
-	"Choose the correct spelling",
-	"Choose the correct spelling",
-	"Select the word with correct spelling",
-	"Select the word with correct spelling",
-	"Which is the top view?",
-	"Which is the top view?",
-	"Can you find the the mistake?",
-	"Can you find the the mistake?",
-	"Select the image different from the rest",
-	"Select the image different from the rest",
-	"Find the missing number.",
-	"Find the missing number.",
-	"Which path takes you out of the maze?",
-	"Which path takes you out of the maze?",
-	"How many colors can you see?",
-	"How many colors can you see?",
-	"Which square looks different?",
-	"Which square looks different?",
-	"How many 9s can you see in the above picture?",
-	"How many 9s can you see in the above picture?",
-];
+primary_q = ['Count total no. of figures in the above image.', 'Count total no. of figures in the above image.', 'Which horse is different?', 'Which horse is different?', 'Which one is different?', 'Which one is different?', 'Which colors are the same ?', 'Which colors are the same ?', 'How many squares are there ?', 'How many squares are there ?', 'Which one is different', 'Which one is different', 'How many triangles are present in the above figure ?', 'How many triangles are present in the above figure ?', 'Which of the above figures is different?', 'Which of the above figures is different?', 'Count the number of differences in the above images.', 'Count the number of differences in the above images.', 'How many rectangles are there in the figure?', 'How many rectangles are there in the figure?', 'Which one is different', 'Which one is different', 'Which one is different', 'Which one is different', 'Which one is different', 'Which one is different', 'Count no. of difference for above two images', 'Count no. of difference for above two images', 'Count no. of difference for above two images', 'Count no. of difference for above two images', 'Count no. of difference for above two images', 'Count no. of difference for above two images', 'How many differences are there between the above two images?', 'How many differences are there between the above two images?', 'Choose a figure which is different from the rest.', 'Choose a figure which is different from the rest.', 'Choose a figure which is different from the rest.', 'Choose a figure which is different from the rest.', 'How many differences are there between the above two images?', 'How many differences are there between the above two images?', 'Choose the correct spelling', 'Choose the correct spelling', 'Select the word with correct spelling', 'Select the word with correct spelling', 'Which is the top view?', 'Which is the top view?', 'Can you find the mistake?', 'Can you find the mistake?', 'Select the image different from the rest', 'Select the image different from the rest', 'Find the missing number.', 'Find the missing number.', 'Which path takes you out of the maze?', 'Which path takes you out of the maze?', 'How many colors can you see?', 'How many colors can you see?', 'Which square looks different?', 'Which square looks different?', 'How many 9’s can you see in the above picture?', 'How many 9’s can you see in the above picture?'];
 
 primary_q_options = [
 	["5", "7", "9", "8"],
@@ -187,6 +126,8 @@ primary_q_ans = [
 	"D",
 ]; // hard
 
+primary_q_priors = [[3, 62, 7, 28], [3, 62, 7, 28], [70, 10, 12, 8], [70, 10, 12, 8], [11, 69, 10, 10], [11, 69, 10, 10], [12, 18, 57, 13], [12, 18, 57, 13], [7, 73, 11, 9], [7, 73, 11, 9], [25, 55, 8, 12], [25, 55, 8, 12], [25, 3, 65, 7], [25, 3, 65, 7], [70, 15, 5, 10], [70, 15, 5, 10], [13, 13, 67, 7], [13, 13, 67, 7], [7, 17, 73, 3], [7, 17, 73, 3], [80, 7, 11, 2], [80, 7, 11, 2], [61, 19, 15, 5], [61, 19, 15, 5], [14, 6, 76, 4], [14, 6, 76, 4], [57, 23, 16, 4], [57, 23, 16, 4], [14, 66, 11, 9], [14, 66, 11, 9], [13, 77, 6, 4], [13, 77, 6, 4], [8, 82, 2, 8], [8, 82, 2, 8], [71, 9, 10, 10], [71, 9, 10, 10], [76, 4, 11, 9], [76, 4, 11, 9], [12, 68, 13, 7], [12, 68, 13, 7], [13, 15, 65, 7], [13, 15, 65, 7], [77, 3, 1, 19], [77, 3, 1, 19], [7, 2, 88, 3], [7, 2, 88, 3], [12, 3, 78, 8], [12, 3, 78, 8], [5, 5, 14, 76], [5, 5, 14, 76], [17, 3, 16, 64], [17, 3, 16, 64], [11, 5, 79, 5], [11, 5, 79, 5], [7, 16, 3, 74], [7, 16, 3, 74], [80, 4, 5, 11], [80, 4, 5, 11], [72, 8, 13, 7], [72, 8, 13, 7]];
+
 primary_q_images = [
 	"1.png",
 	"1.png",
@@ -220,6 +161,10 @@ primary_q_images = [
 	"15.png",
 	"16.png",
 	"16.png",
+	"image15.png",
+	"image15.png",
+	"image16.png",
+	"image16.png",
 	"image17.png",
 	"image17.png",
 	"image18.png",
@@ -238,16 +183,12 @@ primary_q_images = [
 	"image24.png",
 	"image25.png",
 	"image25.png",
-	"image26.png",
-	"image26.png",
 	"image27.png",
 	"image27.png",
+	"image28.png",
+	"image28.png",
 	"image29.png",
 	"image29.png",
-	"image30.png",
-	"image30.png",
-	"image.png",
-	"image.png",
 ];
 
 primary_score = 0;
@@ -298,7 +239,7 @@ let countdown;
 function resetTimer() {
 	let startDate = new Date();
 	let endDate = new Date();
-	endDate.setSeconds(endDate.getSeconds() + 5);
+	endDate.setSeconds(endDate.getSeconds() + 500);
 	const months = [
 		"January",
 		"February",
@@ -381,11 +322,12 @@ window.onload = function () {
 	resetTimer();
 	// nextQ();
 	addToPrimaryCard(curr_prim_q_no - 1);
+    makeGraph(curr_prim_q_no);
 };
 
 function addToPrimaryCard(i) {
 	let primary_task = `<div class="card">
-    <img class="p-task-img" src="/Images/primary_imgs/${primary_q_images[i]}" width="350" height="350">
+    <img class="p-task-img" src="/Images/primary_imgs/${primary_q_images[i]}" width="600" height="350">
         <div class="card-body">
             <div class = "qs"> ${primary_q[i]}</div>
             <input type="radio" name = "option" class="p_op_a option">${primary_q_options[i][0]}<br>
@@ -402,7 +344,7 @@ function addToPrimaryCard(i) {
 //Insert the next question into the html dom and update the variables
 function nextQ() {
 	$("#primary-task").empty();
-
+	makeGraph(curr_prim_q_no);
 	if (curr_prim_q_no == 1) {
 		sec_q_attempt_for_prim.push(no_of_sec_correct);
 	} else {
@@ -533,3 +475,67 @@ function resetTimerSec() {
 
 	getRemainingTime();
 }
+function makeGraph(i) {
+	$(".stats-div").empty();
+    $(".stats-div").append(`<canvas class="stats"></canvas>`);
+    console.log("This function is called");
+	const labels = ["A", "B", "C", "D"];
+	const data = {
+		labels: labels,
+		datasets: [
+			{
+				label: "Majority Votes",
+				data: [primary_q_priors[i][0], primary_q_priors[i][1], primary_q_priors[i][2], primary_q_priors[i][3]],
+				backgroundColor: "rgb(255,99, 132, 0.4)", //Utils.CHART_COLORS.red,
+				borderColor: "rgb(255,99,132)",
+				stack: "Stack 0",
+			},
+		],
+	};
+	const config = {
+		type: "bar",
+		data: data,
+		options: {
+			plugins: {
+				title: {
+					display: true,
+					text: "",
+					color: "#000000",
+				},
+				legend: {
+					labels: {
+						color: "#000000",
+					},
+				},
+				scales: {
+					y: {
+						ticks: {
+							color: "#000000",
+						},
+					},
+				},
+			},
+			responsive: true,
+			interaction: {
+				intersect: false,
+			},
+			scales: {
+				x: {
+					stacked: true,
+					ticks: {
+						color: "#000000",
+					},
+				},
+				y: {
+					stacked: true,
+					ticks: {
+						color: "#000000",
+					},
+				},
+			},
+			aspectRatio: 1,
+		},
+	};
+	var myChart = new Chart(document.querySelector(".stats"), config);
+}
+

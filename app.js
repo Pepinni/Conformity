@@ -40,7 +40,6 @@ const userSchema = new mongoose.Schema({
     primary_score : Number,
     secondary_right : Number,
     secondary_wrong : Number,
-    num_sec_q_viewed : String,
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -105,6 +104,6 @@ app.post('/tip', function(req,res){
     res.redirect('/');
 })
 
-app.listen(process.env.PORT || 3000, function(){
-    console.log("Server running on port 3000.");
+app.listen(process.env.PORT || 5000, function(){
+    console.log("Server running on port 5000.");
 })
