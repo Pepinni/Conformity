@@ -1,42 +1,253 @@
 primary_q = [
-	"Count total no. of figures in the below image",
-	"Which horse is different ?",
+	"Count total no. of figures in the below image.",
+	"Count total no. of figures in the below image.",
+	"Which horse is different?",
+	"Which horse is different?",
+	"Which one is different?",
 	"Which one is different?",
 	"Which colors are the same ?",
+	"Which colors are the same ?",
 	"How many squares are there ?",
+	"How many squares are there ?",
+	"Which one is different",
+	"Which one is different",
+	"How many triangles are present in the below figure ?",
 	"How many triangles are present in the below figure ?",
 	"Which of the below figures is different?",
-	"Count the number of differences in the below images",
+	"Which of the below figures is different?",
+	"Count the number of differences in the below images.",
+	"Count the number of differences in the below images.",
 	"How many rectangles are there in the figure?",
+	"How many rectangles are there in the figure?",
+	"Which one is different",
+	"Which one is different",
+	"Which one is different",
+	"Which one is different",
+	"Which one is different",
+	"Which one is different",
+	"Count no. of difference for below two images",
+	"Count no. of difference for below two images",
+	"Count no. of difference for below two images",
+	"Count no. of difference for below two images",
+	"Count no. of difference for below two images",
+	"Count no. of difference for below two images",
 	"How many differences are there between the above two images?",
-]; // hard
+	"How many differences are there between the above two images?",
+	"Choose a figure which is different from the rest.",
+	"Choose a figure which is different from the rest.",
+	"Choose a figure which is different from the rest.",
+	"Choose a figure which is different from the rest.",
+	"How many differences are there between the above two images?",
+	"How many differences are there between the above two images?",
+	"Choose the correct spelling",
+	"Choose the correct spelling",
+	"Select the word with correct spelling",
+	"Select the word with correct spelling",
+	"Which is the top view?",
+	"Which is the top view?",
+	"Can you find the the mistake?",
+	"Can you find the the mistake?",
+	"Select the image different from the rest",
+	"Select the image different from the rest",
+	"Find the missing number.",
+	"Find the missing number.",
+	"Which path takes you out of the maze?",
+	"Which path takes you out of the maze?",
+	"How many colors can you see?",
+	"How many colors can you see?",
+	"Which square looks different?",
+	"Which square looks different?",
+	"How many 9s can you see in the above picture?",
+	"How many 9s can you see in the above picture?",
+];
 
 primary_q_options = [
 	["5", "7", "9", "8"],
-	["1", "2", "3", "None"],
-	["1", "2", "3", "None"],
-	["2 and 3", "1 and 2", "3 and 4", "None"],
+	["5", "7", "9", "8"],
+	["1", "2", "3", "All are same"],
+	["1", "2", "3", "All are same"],
+	["1", "2", "3", "All are same"],
+	["1", "2", "3", "All are same"],
+	["2 and 3", "1 and 2", "3 and 4", "None of the options"],
+	["2 and 3", "1 and 2", "3 and 4", "None of the options"],
 	["30", "35", "40", "45"],
+	["30", "35", "40", "45"],
+	["P", "Q", "R", "S"],
+	["P", "Q", "R", "S"],
 	["20", "24", "21", "23"],
-	[, "A", "B", "C", "D"],
+	["20", "24", "21", "23"],
+	["A", "B", "C", "D"],
+	["A", "B", "C", "D"],
+	["15", "5", "10", "20"],
 	["15", "5", "10", "20"],
 	["8", "9", "10", "7"],
+	["8", "9", "10", "7"],
+	["A", "B", "C", "D"],
+	["A", "B", "C", "D"],
+	["A", "B", "C", "D"],
+	["A", "B", "C", "D"],
+	["A", "B", "C", "D"],
+	["A", "B", "C", "D"],
+	["10", "11", "12", "14"],
+	["10", "11", "12", "14"],
+	["3", "5", "7", "9"],
+	["3", "5", "7", "9"],
+	["10", "11", "9", "5"],
+	["10", "11", "9", "5"],
 	["7", "9", "6", "13"],
+	["7", "9", "6", "13"],
+	["1", "3", "4", "5"],
+	["1", "3", "4", "5"],
+	["1", "2", "3", "5"],
+	["1", "2", "3", "5"],
+	["13", "10", "9", "11"],
+	["13", "10", "9", "11"],
+	["C", "A", "D", "B"],
+	["C", "A", "D", "B"],
+	["D", "C", "A", "B"],
+	["D", "C", "A", "B"],
+	["C", "D", "B", "A"],
+	["C", "D", "B", "A"],
+	["2,4,8", "5,9", "1,3,5,7", "3,7"],
+	["2,4,8", "5,9", "1,3,5,7", "3,7"],
+	["A", "B", "C", "None"],
+	["A", "B", "C", "None"],
+	["22", "13", "31", "24"],
+	["22", "13", "31", "24"],
+	["C", "A", "B", "None"],
+	["C", "A", "B", "None"],
+	["5", "7", "4", "6"],
+	["5", "7", "4", "6"],
+	["B", "D", "A", "C"],
+	["B", "D", "A", "C"],
+	["8", "7", "11", "9"],
+	["8", "7", "11", "9"],
 ];
 
-primary_q_ans = ["B", "C", "B", "D", "B", "B", "C", "C", "C", "B"]; // hard
+primary_q_ans = [
+	"B",
+	"B",
+	"D",
+	"D",
+	"B",
+	"B",
+	"D",
+	"D",
+	"B",
+	"B",
+	"S",
+	"S",
+	"C",
+	"C",
+	"C",
+	"C",
+	"C",
+	"C",
+	"B",
+	"B",
+	"A",
+	"A",
+	"D",
+	"D",
+	"C",
+	"C",
+	"C",
+	"C",
+	"B",
+	"B",
+	"A",
+	"A",
+	"B",
+	"B",
+	"D",
+	"D",
+	"A",
+	"A",
+	"C",
+	"C",
+	"C",
+	"C",
+	"C",
+	"C",
+	"C",
+	"C",
+	"B",
+	"B",
+	"D",
+	"D",
+	"A",
+	"A",
+	"C",
+	"C",
+	"A",
+	"A",
+	"A",
+	"A",
+	"D",
+	"D",
+]; // hard
 
 primary_q_images = [
-	"q1.png",
-	"q2.png",
-	"q3.png",
-	"q4.jpeg",
-	"q5.png",
-	"q6.png",
-	"q7.png",
-	"q8.jpeg",
-	"q9.png",
-	"q10.png",
+	"1.png",
+	"1.png",
+	"2.png",
+	"2.png",
+	"3.png",
+	"3.png",
+	"4.png",
+	"4.png",
+	"5.png",
+	"5.png",
+	"6.png",
+	"6.png",
+	"7.png",
+	"7.png",
+	"8.png",
+	"8.png",
+	"9.png",
+	"9.png",
+	"10.png",
+	"10.png",
+	"11.png",
+	"11.png",
+	"12.png",
+	"12.png",
+	"13.png",
+	"13.png",
+	"14.png",
+	"14.png",
+	"15.png",
+	"15.png",
+	"16.png",
+	"16.png",
+	"image17.png",
+	"image17.png",
+	"image18.png",
+	"image18.png",
+	"image19.png",
+	"image19.png",
+	"image20.png",
+	"image20.png",
+	"image21.png",
+	"image21.png",
+	"image22.png",
+	"image22.png",
+	"image23.png",
+	"image23.png",
+	"image24.png",
+	"image24.png",
+	"image25.png",
+	"image25.png",
+	"image26.png",
+	"image26.png",
+	"image27.png",
+	"image27.png",
+	"image29.png",
+	"image29.png",
+	"image30.png",
+	"image30.png",
+	"image.png",
+	"image.png",
 ];
 
 primary_score = 0;
@@ -145,15 +356,15 @@ function resetTimer() {
 		if (t < 0) {
 			updateDuration();
 			primary_q_sel.push("N");
-			if (curr_prim_q_no > primary_q.length) {
+			if (curr_prim_q_no >= primary_q.length) {
 				clearInterval(countdown);
-                var dur =  `<input type="text" name = "dur" value = "${primary_q_dur.toString()}">`;
-                var sels = `<input type="text" name = "sel" value = "${primary_q_sel.toString()}">`;
-                var p_score = `<input type="text" name = "p_score" value = "${primary_score}">`;
-                $(".dummy-form").append(dur);
-                $(".dummy-form").append(sels);
-                $(".dummy-form").append(p_score);
-                $(".dummy-form").submit();
+				var dur = `<input type="text" name = "dur" value = "${primary_q_dur.toString()}">`;
+				var sels = `<input type="text" name = "sel" value = "${primary_q_sel.toString()}">`;
+				var p_score = `<input type="text" name = "p_score" value = "${primary_score}">`;
+				$(".dummy-form").append(dur);
+				$(".dummy-form").append(sels);
+				$(".dummy-form").append(p_score);
+				$(".dummy-form").submit();
 				return;
 			}
 			nextQ();
@@ -169,13 +380,12 @@ function resetTimer() {
 window.onload = function () {
 	resetTimer();
 	// nextQ();
-    addToPrimaryCard(curr_prim_q_no-1);
+	addToPrimaryCard(curr_prim_q_no - 1);
 };
 
 function addToPrimaryCard(i) {
 	let primary_task = `<div class="card">
-    <img class="p-task-img" src="/Images/primary_img/${primary_q_images[i]}" width="350" height="350">
-    <form action="'/none" method="POST">
+    <img class="p-task-img" src="/Images/primary_imgs/${primary_q_images[i]}" width="350" height="350">
         <div class="card-body">
             <div class = "qs"> ${primary_q[i]}</div>
             <input type="radio" name = "option" class="p_op_a option">${primary_q_options[i][0]}<br>
@@ -183,8 +393,9 @@ function addToPrimaryCard(i) {
             <input type="radio" name = "option" class="p_op_c option">${primary_q_options[i][2]}<br>
             <input type="radio" name = "option" class="p_op_d option">${primary_q_options[i][3]}<br>
         </div>
-    </form>
 </div>`;
+	if (i % 2 == 1)
+		$("#primary-task").append(`<div>DO YOU WISH TO CHANGE YOUR ANSWER?</div>`);
 	$("#primary-task").append(primary_task);
 }
 
@@ -244,31 +455,15 @@ $("#primary-task").on("click", ".option", function () {
 
 // Pressing Space to move to the next question
 document.body.onkeyup = function (e) {
-	$("#primary_task").empty();
 	if (e.key == " " || e.code == "Space" || e.keyCode == 32) {
+		$("#primary_task").empty();
 		primary_q_sel.push("N");
 		updateDuration();
 		nextQ();
+	} else if (e.keyCode == 80) {
+		// alert("P was pressed");
 	}
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ///////////////////////////////////////////
 // Logic for secocondary questions
@@ -276,8 +471,29 @@ let countdownSec;
 function resetTimerSec() {
 	let endDate = new Date();
 	endDate.setSeconds(endDate.getSeconds() + 10);
-	const months = ["January","February",		"March",		"April",		"May",		"June",		"July",		"August",		"September",		"October",		"November",		"December",	];
-	const weekdays = [		"Sunday",		"Monday",		"Tuesday",		"Wednesday",		"Thursday",		"Friday",		"Saturday",	];
+	const months = [
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"October",
+		"November",
+		"December",
+	];
+	const weekdays = [
+		"Sunday",
+		"Monday",
+		"Tuesday",
+		"Wednesday",
+		"Thursday",
+		"Friday",
+		"Saturday",
+	];
 	let ed = new Date(endDate);
 	const futureTime = ed.getTime();
 	function getRemainingTime() {
@@ -290,7 +506,8 @@ function resetTimerSec() {
 		let seconds = Math.floor((t % oneMinute) / 1000);
 
 		// Changing the values in DOM
-		const mins = $(".mins"); const secs = $(".secs");
+		const mins = $(".mins");
+		const secs = $(".secs");
 		const items = [hrs, mins, secs];
 		const values = [hours, minutes, seconds];
 		function format(item) {

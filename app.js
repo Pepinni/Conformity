@@ -92,7 +92,7 @@ app.get("/q", function(req,res){
 
 app.post("/dummy", function(req,res){
     console.log(req.body);
-    res.render("question");
+    res.render("questions");
 })
 
 app.post('/test', function(req,res){
