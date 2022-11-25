@@ -410,6 +410,7 @@ function resetTimer() {
 
 function startSurvey() {
 	$(".cts").hide();
+    $(".instructions").hide();
 	resetTimer();
 	addToPrimaryCard(curr_prim_q_no - 1);
 	setInterval(function () {

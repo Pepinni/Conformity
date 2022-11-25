@@ -1,0 +1,31 @@
+.form-group{
+  width:50%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+}
+
+.col-sm-2{
+  margin-left: 20px;
+}
+.col-sm-10{
+  margin-left: 20px;
+}
+
+.heading{
+  position: absolute;
+  /* top: 50%; */
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+}
+img{
+  width: 162px;
+  height:auto;
+}
+/* .form-check{
+  width:50%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+} */

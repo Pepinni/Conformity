@@ -11,10 +11,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Questions</title>
+    <style>
+        .cts {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .instructions{
+            margin-left: 10px;
+            margin-block-end: 50px;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="user" hidden>Hello <%# name %></div>
+    <div id="user" hidden>Hello <%= email %></div>
     
     <!-- Timer for the quiz -->
     <div class="timer-box">
@@ -24,14 +42,30 @@
             <div class="timer-seconds"><span class="secs">s</span>s</div>
         </div>
     </div>
-
+    
     <form action="/dummy" method="POST" hidden class="dummy-form">
         <!-- This form will be used to send data to  -->
+        <input type="email" name="email" value="<%=email%>">
         <button type="submit">.</button>
     </form>
 
     <div class="split left">
         <div id="primary-task">
+            <div class="instructions">
+                <h1> Instructions </h1>
+                <p>Welcome to the General Survey.
+                    This survey is part of Advance Social Psychology Course under the proposition of Purnima Bajre. Your willingness to be part of this survey is paramount. The data will be used for purely research purpose and your identity will not be revealed at any stage of research to anyone. 
+                    However, it is much desired that you answer the questions with utmost honesty as it will be your true contribution towards research community. </p>
+                <ol>
+                    <li>There will be 30 questions and you have to answer all of them.</li>
+                    <li>Time allotted for each question will be 1 min 30 seconds.</li>
+                    <li>You will be provided with a visual as well as a auditory question. You will have to answer the visual question by selecting the correct option.</li>
+                    <li>The auditory question will be running in background and for answering the auditory question you will have to press the letter 'P' each time you hear 'P' in the audio.</li>
+                </ol>
+                <p>
+                We thank you for your valuable time and there will not be any compensation attached with this survey.
+                </p>
+            </div>
             <button class="cts" onclick="startSurvey()">Click to start</button>
         </div>
     </div>
