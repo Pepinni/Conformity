@@ -422,7 +422,7 @@ function startSurvey() {
 
 function addToPrimaryCard(i) {
 	let primary_task = `<div class="card border-0">
-    <img class="p-task-img" src="/Images/primary_imgs/${primary_q_images[i]}" width="600" height="350">
+    <img class="p-task-img" src="/Images/compress/${primary_q_images[i]}" width="600" height="350">
     <div class="card-body">
     <div class = "qs"> ${primary_q[i]}</div>
     <input type="radio" name = "option" class="p_op_a option">${primary_q_options[i][0]}<br>
