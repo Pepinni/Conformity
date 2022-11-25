@@ -83,7 +83,23 @@ app.post("/newuser", function (req, res) {
 			console.log("New User Added");
 		}
 	});
-	res.render("questions", { email: body.email });
+    User.find({}, function(err,u){
+        if(err){
+            console.log(err);
+            res.redirect("/");
+        }
+        else{
+            console.log(u);
+            var size = Object.keys(u).length;
+            console.log("Size is ", size);
+            if(size%2==0){
+                res.render("questions", { email: body.email });
+            }
+            else{
+                res.render("questions2", { email: body.email });
+            }
+        }
+    })
 });
 
 app.get("/q", function (req, res) {
@@ -106,7 +122,7 @@ app.post("/dummy", function (req, res) {
         }
 	});
 	console.log(req.body);
-	res.redirect("/");
+	res.render("thankyou", {body:body});
 });
 
 app.post("/test", function (req, res) {
@@ -122,21 +138,3 @@ app.post("/tip", function (req, res) {
 app.listen(process.env.PORT || 5000, function () {
 	console.log("Server running on port 5000.");
 });
-
-// MongoServerError: E11000 duplicate key error collection: Psycho.users index: username_1 dup key: { username: null }
-//     at C:\Users\PIYUS\Desktop\Psycho_web\Conformity\node_modules\mongodb\lib\operations\insert.js:53:33
-//     at C:\Users\PIYUS\Desktop\Psycho_web\Conformity\node_modules\mongodb\lib\cmap\connection_pool.js:308:25
-//     at C:\Users\PIYUS\Desktop\Psycho_web\Conformity\node_modules\mongodb\lib\sdam\server.js:213:17
-//     at handleOperationResult (C:\Users\PIYUS\Desktop\Psycho_web\Conformity\node_modules\mongodb\lib\sdam\server.js:329:20)
-//     at Connection.onMessage (C:\Users\PIYUS\Desktop\Psycho_web\Conformity\node_modules\mongodb\lib\cmap\connection.js:219:9)
-//     at MessageStream.<anonymous> (C:\Users\PIYUS\Desktop\Psycho_web\Conformity\node_modules\mongodb\lib\cmap\connection.js:60:60)
-//     at MessageStream.emit (node:events:520:28)
-//     at processIncomingData (C:\Users\PIYUS\Desktop\Psycho_web\Conformity\node_modules\mongodb\lib\cmap\message_stream.js:132:20)
-//     at MessageStream._write (C:\Users\PIYUS\Desktop\Psycho_web\Conformity\node_modules\mongodb\lib\cmap\message_stream.js:33:9)
-//     at writeOrBuffer (node:internal/streams/writable:389:12) {
-//   index: 0,
-//   code: 11000,
-//   keyPattern: { username: 1 },
-//   keyValue: { username: null },
-//   [Symbol(errorLabels)]: Set(0) {}
-// }
