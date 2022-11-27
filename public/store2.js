@@ -368,6 +368,10 @@ function resetTimer() {
 	let ed = new Date(endDate);
 	const futureTime = ed.getTime();
 	function getRemainingTime() {
+		if (curr_prim_q_no > primary_q.length) {
+			clearInterval(countdown);
+			submitData();
+		}
 		const today = new Date().getTime();
 		const t = futureTime - today;
 		const oneHour = 60 * 60 * 1000;
@@ -393,11 +397,17 @@ function resetTimer() {
 		if (t < 0) {
 			updateDuration();
 			primary_q_sel.push("N");
-			if (curr_prim_q_no >= primary_q.length) {
-				clearInterval(countdown);
-				submitData();
-				return;
-			}
+			// if (curr_prim_q_no > primary_q.length) {
+			// 	console.log(
+			// 		"Time is up because curr_prim_q_no = ",
+			// 		curr_prim_q_no,
+			// 		"and primary_q.length = ",
+			// 		primary_q.length
+			// 	);
+			// 	clearInterval(countdown);
+			// 	submitData();
+			// 	return;
+			// }
 			nextQ();
 			clearInterval(countdown);
 			resetTimer();
@@ -410,7 +420,7 @@ function resetTimer() {
 
 function startSurvey() {
 	$(".cts").hide();
-    $(".instructions").hide();
+	$(".instructions").hide();
 	resetTimer();
 	addToPrimaryCard(curr_prim_q_no - 1);
 	setInterval(function () {
@@ -442,7 +452,7 @@ function addToPrimaryCard(i) {
 function nextQ() {
 	$("#primary-task").empty();
 	curr_prim_q_no += 1;
-    if(curr_prim_q_no>=primary_q.length) submitData();
+	if (curr_prim_q_no >= primary_q.length) submitData();
 	addToPrimaryCard(curr_prim_q_no - 1);
 	makeGraph(curr_prim_q_no - 1);
 	clearInterval(countdown);
@@ -489,7 +499,7 @@ document.body.onkeyup = function (e) {
 		updateDuration();
 		nextQ();
 	} else if (e.key == "p" || e.key == "P") {
-		if (sn>1 && pees[sn - 1] == "P" && pees[sn-2] == "M") correct_p++;
+		if (sn > 1 && pees[sn - 1] == "P" && pees[sn - 2] == "M") correct_p++;
 		else wrong_p++;
 	}
 };

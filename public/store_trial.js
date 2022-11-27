@@ -54,6 +54,10 @@ function resetTimer() {
 	let ed = new Date(endDate);
 	const futureTime = ed.getTime();
 	function getRemainingTime() {
+        if (curr_prim_q_no > primary_q.length) {
+			clearInterval(countdown);
+			submitData();
+		}
 		const today = new Date().getTime();
 		const t = futureTime - today;
 		const oneHour = 60 * 60 * 1000;
@@ -79,11 +83,12 @@ function resetTimer() {
 		if (t < 0) {
 			updateDuration();
 			primary_q_sel.push("N");
-			if (curr_prim_q_no >= primary_q.length) {
-				clearInterval(countdown);
-				submitData();
-				return;
-			}
+			// if (curr_prim_q_no > primary_q.length) {
+            //     console.log("Time is up because curr_prim_q_no = ", curr_prim_q_no ,"and primary_q.length = ", primary_q.length);
+			// 	clearInterval(countdown);
+			// 	submitData();
+			// 	return;
+			// }
 			nextQ();
 			clearInterval(countdown);
 			resetTimer();
