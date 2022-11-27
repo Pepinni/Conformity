@@ -24,7 +24,8 @@
             margin: 4px 2px;
             cursor: pointer;
         }
-        .instructions{
+
+        .instructions {
             margin-left: 10px;
             margin-block-end: 50px;
         }
@@ -33,7 +34,7 @@
 
 <body>
     <div id="user" hidden>Hello <%= email %></div>
-    
+
     <!-- Timer for the quiz -->
     <div class="timer-box">
         <div class="timer">
@@ -42,7 +43,7 @@
             <div class="timer-seconds"><span class="secs">s</span>s</div>
         </div>
     </div>
-    
+
     <form action="/dummy" method="POST" hidden class="dummy-form">
         <!-- This form will be used to send data to  -->
         <input type="email" name="email" value="<%=email%>">
@@ -54,16 +55,27 @@
             <div class="instructions">
                 <h1> Instructions </h1>
                 <p>Welcome to the General Survey.
-                    This survey is part of Advance Social Psychology Course under the proposition of Purnima Bajre. Your willingness to be part of this survey is paramount. The data will be used for purely research purpose and your identity will not be revealed at any stage of research to anyone. 
-                    However, it is much desired that you answer the questions with utmost honesty as it will be your true contribution towards research community. </p>
+                    This survey is part of Advance Social Psychology Course under the supervision of Dr. Purnima Bajre.
+                    This survey is about decision making. Your willingness to be part of this survey is paramount. The
+                    data will be used for purely research purpose and your identity will not be revealed at any stage of
+                    research to anyone. At any stage of filling in the survey, if you are disinterested, you are free to
+                    quit.
+                    However, it is much desired that you answer the questions with utmost honesty as it will be your
+                    true contribution towards research community. </p>
+                <p> General Instructions:-</p>
                 <ol>
                     <li>There will be 30 questions and you have to answer all of them.</li>
                     <li>Time allotted for each question will be 1 min 30 seconds.</li>
-                    <li>You will be provided with a visual as well as a auditory question. You will have to answer the visual question by selecting the correct option.</li>
-                    <li>The auditory question will be running in background and for answering the auditory question you will have to press the letter 'P' each time you hear 'P' in the audio.</li>
+                    <li>You will move to the next question as soon as you select any option.</li>
+                    <li>You will be provided with a visual as well as a auditory question. You will have to answer the
+                        visual question by selecting the correct option.</li>
+                    <li>The auditory question will be running in background and for answering the auditory question, you
+                        will have to press the letter 'P' each time you hear 'P' in the audio except the times when the
+                        letter 'M' comes <em>just before</em> letter 'P'</li>
                 </ol>
                 <p>
-                We thank you for your valuable time and there will not be any compensation attached with this survey.
+                    We thank you for your valuable time and there will not be any compensation attached to this
+                    survey.
                 </p>
             </div>
             <button class="cts" onclick="startSurvey()">Click to start</button>

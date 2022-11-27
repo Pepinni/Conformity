@@ -67,8 +67,21 @@ app.get("/", function (req, res) {
 });
 
 app.post("/newuser", function (req, res) {
-	console.log(req.body);
+    console.log(req.body);
 	var body = req.body;
+    User.find({email : body.email}, function(err,u){
+        if(err){
+            console.log(err);
+            res.redirect("/");
+        }
+        else{
+            console.log(u);
+            var size = Object.keys(u).length;
+            if(size==1){
+                res.send("You have previously attempted the survey!");
+            }
+        }
+    })
 	const newUser = new User({
 		name: body.name,
 		email: body.email,
@@ -83,6 +96,11 @@ app.post("/newuser", function (req, res) {
 			console.log("New User Added");
 		}
 	});
+    res.render("trial", {email : body.email});
+    
+});
+
+app.post("/dummytrial", function(req,res){
     User.find({}, function(err,u){
         if(err){
             console.log(err);
@@ -93,19 +111,14 @@ app.post("/newuser", function (req, res) {
             var size = Object.keys(u).length;
             console.log("Size is ", size);
             if(size%2==0){
-                res.render("questions", { email: body.email });
+                res.render("questions", { email: req.body.email});
             }
             else{
-                res.render("questions2", { email: body.email });
+                res.render("questions2", { email: req.body.email});
             }
         }
     })
-});
-
-app.get("/q", function (req, res) {
-	res.render("questions");
-});
-
+})
 app.post("/dummy", function (req, res) {
 	var body = req.body;
 	var email = body.email;
@@ -122,7 +135,7 @@ app.post("/dummy", function (req, res) {
         }
 	});
 	console.log(req.body);
-	res.render("thankyou", {body:body});
+	res.send("Thank you for attending this survey and giving us your valuable time!");
 });
 
 app.post("/test", function (req, res) {

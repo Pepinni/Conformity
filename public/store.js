@@ -488,7 +488,7 @@ document.body.onkeyup = function (e) {
 		primary_q_sel.push("N");
 		updateDuration();
 		nextQ();
-	} else if (e.key == "p") {
+	} else if (e.key == "p" || e.key == "P") {
 		if (pees[sn - 1] == "P") correct_p++;
 		else wrong_p++;
 	}

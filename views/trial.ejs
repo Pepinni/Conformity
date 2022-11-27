@@ -29,6 +29,13 @@
             margin-left: 10px;
             margin-block-end: 50px;
         }
+        .trial{
+            font-size: 30px;
+        }
+        .mar{
+            font-size: 20px;
+            color:red;
+        }
     </style>
 </head>
 
@@ -44,7 +51,7 @@
         </div>
     </div>
 
-    <form action="/dummy" method="POST" hidden class="dummy-form">
+    <form action="/dummytrial" method="POST" hidden class="dummy-form-trial">
         <!-- This form will be used to send data to  -->
         <input type="email" name="email" value="<%=email%>">
         <button type="submit">.</button>
@@ -53,6 +60,7 @@
     <div class="split left">
         <div id="primary-task">
             <div class="instructions">
+                <marquee width="100%" direction="left" scrollamount="15" class="mar">This is a trial test!</marquee>
                 <h1> Instructions </h1>
                 <p>Welcome to the General Survey.
                     This survey is part of Advance Social Psychology Course under the supervision of Dr. Purnima Bajre.
@@ -97,7 +105,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Custom JS -->
-    <script src="store.js" type="text/javascript"></script>
+    <script src="store_trial.js" type="text/javascript"></script>
 </body>
 
 </html>
